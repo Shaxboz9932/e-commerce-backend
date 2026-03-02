@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Buyurtma qabul qilindi</title>
+</head>
+<body style="font-family: Arial, sans-serif; color: #333;">
+    <h2>Assalomu alaykum!</h2>
+    <p>Sizning buyurtmangiz muvaffaqiyatli yaratildi. Buyurtma raqami: <strong>{{ order.id }}</strong></p>
+
+    <h3>Buyurtma tafsilotlari:</h3>
+
+    <table style="width: 100%; border-collapse: collapse;">
+        {% for item in order.items.all %}
+        <tr>
+            <td style="padding: 10px; border-bottom: 1px solid #ddd;">
+                <img src="https://picsum.photos/id/237/200/300" alt="{{ item.product.name }}" style="width: 100px; height: auto; border-radius: 5px;">
+            </td>
+            <td style="padding: 10px; border-bottom: 1px solid #ddd;">
+                <h4>{{ item.product.title }}</h4>
+                <p>Miqdori: {{ item.quantity }} ta</p>
+                <p>Narxi: ${{ item.price }}</p>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <p style="margin-top: 20px;">Xaridingiz uchun rahmat!</p>
+</body>
+</html>

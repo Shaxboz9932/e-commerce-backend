@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>process</title>
+</head>
+<body>
+    <form action="{% url 'order:process' order_id %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Pay Now</button>
+    </form>
+</body>
+</html>
