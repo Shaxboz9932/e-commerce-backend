@@ -171,7 +171,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 CORS_ALLOWED_ORIGINS = [
-    "https://e-commerce-frontend-z0gt.onrender.com/",
+    "https://e-commerce-frontend-z0gt.onrender.com",
     "http://localhost:5173",
     "http://localhost:3000",
 ]
