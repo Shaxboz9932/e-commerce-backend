@@ -146,6 +146,10 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 # settings.py
 
 STORAGES = {
+    "default": {
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
+    },
+
     "staticfiles": {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
@@ -169,8 +173,8 @@ SIMPLE_JWT = {
 
 
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
 
 CORS_ALLOWED_ORIGINS = [
     "https://e-commerce-frontend-z0gt.onrender.com",
