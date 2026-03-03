@@ -20,7 +20,7 @@ SECRET_KEY = env("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["e-commerce-backend-96qo.onrender.com", "www.e-commerce-backend-96qo.onrender.com"]
+ALLOWED_HOSTS = ["e-commerce-backend-96qo.onrender.com"]
 CSRF_TRUSTED_ORIGINS = ["https://e-commerce-backend-96qo.onrender.com"]
 
 # Application definition
@@ -54,7 +54,6 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
-    
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
